@@ -32,7 +32,7 @@ apt-get install php7.0-dom -y
 apt-get install php7.0-mysql -y
 apt-get install php7.0-mbstring -y
 rm $1/php_socket_io -fr
-git clone https://github.com/tncrazvan/php_socket_io.git $1/php_socket_io
+git clone https://github.com/glorep/php_socket_io.git $1/php_socket_io
 mkdir $1/php_socket_io/utils/logs
 chmod 777 $1/php_socket_io/* -R
 mysql < $1/php_socket_io/utils/database/dump/localrep.sql -u root -p
@@ -41,7 +41,7 @@ service mysql restart
 apt-get install apache2 -y
 apt-get install libapache2-mod-php7.0 -y
 rm /var/www/html/glorep -fr
-git clone https://github.com/tncrazvan/glorep.git /var/www/html/glorep
+git clone https://github.com/glorep/glorep.git /var/www/html/glorep
 mkdir /var/www/html/glorep/sites/default/files
 mkdir /var/www/html/glorep/sites/default/files/collabrep
 mkdir /var/www/html/glorep/sites/default/files/collabrep/cache
